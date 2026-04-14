@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Ask Question</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Ask Question From Document</h2>
+
+<form action="/ask" method="post">
+
+<input type="text" name="question" placeholder="Ask something..." required>
+
+<button type="submit">Ask</button>
+
+</form>
+
+{% if answer %}
+
+<h3>Answer:</h3>
+
+<p>{{answer}}</p>
+
+<h3>Voice Output:</h3>
+
+<audio controls>
+<source src="{{audio}}" type="audio/mpeg">
+Your browser does not support audio.
+</audio>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

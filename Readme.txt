@@ -1,0 +1,1 @@
+Run System by this cammand : uvicorn main:app --reload
